@@ -1,0 +1,23 @@
+.img {
+  width: 50%;
+  margin: 1em;
+}
+
+.titre {
+  margin: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+$breakpoint-mobile: 450px;
+
+@media (max-width: $breakpoint-mobile) {
+  .img {
+    width: 90%;
+  }
+}

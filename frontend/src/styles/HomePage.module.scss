@@ -1,0 +1,99 @@
+.home-page {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre {
+  font-size: 3.8em;
+  margin: 0.2em;
+  text-align: center;
+}
+
+.info {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coverImg {
+  width: 80%;
+  margin: 1em 0 1em 0;
+}
+
+.details {
+  font-size: 1em;
+  width: 30%;
+  text-align: center;
+  margin: 0;
+}
+
+.scrollBox {
+  width: 90vw;
+  height: 30vh;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+.main-artists {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 30vh;
+  margin: 1em;
+}
+
+.main-artists::-webkit-scrollbar {
+  display: none;
+}
+
+.icon {
+  color: white;
+  font-size: 30px;
+}
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1300px;
+
+@media (min-width: $breakpoint-tablet) {
+  .coverImg {
+    width: 45%;
+  }
+  .titre {
+    font-size: 3.5em;
+  }
+  .info {
+    width: 50%;
+  }
+  .details {
+    font-size: 1em;
+    width: 25%;
+  }
+
+  .scrollBox {
+    width: 80vw;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .scrollBox {
+    width: 70vw;
+  }
+  .coverImg {
+    width: 40%;
+  }
+  .titre {
+    font-size: 4em;
+  }
+  .info {
+    width: 50%;
+  }
+  .details {
+    font-size: 1.5em;
+    width: 25%;
+  }
+}

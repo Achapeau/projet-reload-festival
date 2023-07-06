@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page {
+  height: 92vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+
+.boxLecteur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.lecteur {
+  width: 90%;
+  height: 5em;
+}
+
+.page::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: "Righteous";
+  color: white;
+}
+
+p,
+h2,
+h3,
+h4 {
+  font-family: "Rubik";
+  color: white;
+}
+
+:root {
+  background-image: url("../assets/Images/Background\ Image1.jpg");
+  background-size: auto 100vh;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+$breakpoint-largeScreen: 500px;
+@media (min-width: $breakpoint-largeScreen) {
+  :root {
+    background-size: cover;
+    background-position-y: center;
+  }
+  .boxLecteur {
+    justify-content: right;
+  }
+  .lecteur {
+    width: 20%;
+    margin-right: 1em;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

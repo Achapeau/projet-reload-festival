@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
+.position {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik";
+}
+.reset {
+  display: flex;
+  margin: auto;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 15px;
+  background-color: #fff;
+  font-family: "Rubik";
+}
+
+@media screen and (max-width: 767px) {
+  .position {
+    display: none;
+  }
+}

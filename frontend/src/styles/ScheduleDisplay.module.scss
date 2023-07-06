@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
+}
+
+.schedule {
+  max-width: 100%;
+  margin: 1em;
+}
+
+.titre {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 3em;
+}
+
+.table {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.stages {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+}
+
+.show_day {
+  text-align: center;
+  margin-bottom: 1cm;
+  font-size: 2em;
+}
+.day {
+  display: grid;
+  grid-template-columns: repeat(28, 100px);
+  grid-template-rows: repeat(5, 50px);
+  gap: 5px;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding-left: 2rem;
+}
+
+.day::-webkit-scrollbar {
+  height: 10px;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.day::-webkit-scrollbar-track {
+  background-color: rgba(201, 191, 191, 0.5);
+  border-radius: 10px;
+}
+
+.day::-webkit-scrollbar-thumb {
+  background: rgba(grey, 0.7);
+  border-radius: 10px;
+}
+
+.day::-webkit-scrollbar-thumb:hover {
+  background: white;
+  border: solid 1px rgb(158, 155, 155);
+}
+
+.timeline::after {
+  content: "";
+  top: 20px;
+  height: 232px;
+  width: 2px;
+  transform: translateX(-24px);
+  position: absolute;
+  background-color: rgb(234, 219, 219);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.timeline {
+  position: relative;
+  translate: -50px;
+}
+
+.show {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  z-index: 1;
+}
+.showTime {
+  color: black;
+  font-size: 0.8em;
+}
+.artist {
+  border-radius: 5px;
+  border: transparent;
+  width: 60%;
+  font-family: "Righteous";
+  font-size: 1em;
+  background-color: transparent;
+  cursor: pointer;
+}
+.stage {
+  height: 50px;
+  width: 200px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #ffa269, #c3a0d5);
+  border-radius: 5px;
+  font-family: "Righteous";
+}
+
+$breakpoint-mobile: 450px;
+
+@media (max-width: $breakpoint-mobile) {
+  .day {
+    grid-template-columns: repeat(28, 50px);
+    grid-template-rows: repeat(5, 50px);
+    padding-left: 1em;
+  }
+
+  .stage {
+    width: 80px;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.2em;
+  }
+
+  .timeline {
+    font-size: 0.8rem;
+    translate: -25px;
+  }
+
+  .timeline::after {
+    transform: translateX(-19px);
+  }
+
+  .showTime {
+    font-size: 0.6em;
+  }
+
+  .artist {
+    font-size: 0.8em;
+  }
+}

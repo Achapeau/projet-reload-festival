@@ -1,0 +1,300 @@
+.reservation-page {
+  height: 100%;
+  .basket-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 17rem;
+    height: auto;
+    border-radius: 3rem;
+    background: linear-gradient(230deg, #dccce7, #ffb79e);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2),
+      inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.5s, box-shadow 0.3s;
+    font-family: "Rubik";
+    text-align: center;
+  
+    .panier {
+      background: linear-gradient(120deg, #fdd6a7, #ebeef3);
+      color: #333333;
+    }
+  
+    .basket-items {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .basket-header {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    .basket-type {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    .basket-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      width: 100%;
+    }
+  
+    .basket-button {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      font-family: "Righteous";
+      padding: 4px 8px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background-color 0.5s, box-shadow 0.5s;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+  
+    .basket-button:hover {
+      background-color: #c1b5b5;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      font-family: "Righteous";
+      transition: transform 0.5s, box-shadow 0.3s;
+    }
+    .basket-total-price {
+      margin-top: 10px;
+    }
+  }
+
+  .basket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+      inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .button {
+    background-color: linear-gradient(
+      120deg,
+      rgba(245, 247, 250, 0.8) 0%,
+      #c3a0d5 100%
+    );
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-family: "Righteous";
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+    .cart {
+      
+      .cadre-popUp {
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        background-color: #000000;
+    }
+    
+  }
+  
+  .close{
+    border-radius: 15px;
+    font-size: large;
+    min-width: 7rem;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.25);
+    background-image: linear-gradient(45deg, #ffa269, #669bb0,  #c3a0d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hide-popUp {
+    display: none;
+  }
+  
+  .show-popUp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: "Righteous";
+    align-items: center ;
+    text-align: center;
+    gap: 1.3rem;
+    height: 100%;
+
+    .annonce {
+      background-color: #ebedee;
+      opacity: 0.9;
+      border-radius: 15px;
+      padding: 1rem;
+      font-size: x-large;
+      height: 15vh;
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      background-image: linear-gradient(45deg, #ffa269, #669bb0,  #c3a0d5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+  }
+  
+  .ticket-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 15.6rem;
+    height: 20rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ticket-card.Samedi {
+    background: linear-gradient(120deg, #ecb0d6 0%, #ebedee 60%);
+    color: #333333;
+  }
+  
+  .ticket-card.Dimanche {
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3a0d5 60%);
+    color: #333333;
+  }
+  
+  .ticket-card.Weekend {
+    background: linear-gradient(120deg, #ffa269 0%, #669bb0 60%);
+    color: #333333;
+  }
+  
+  .ticket-type {
+    font-size: 24px;
+  }
+  
+  .ticket-price {
+    font-size: 20px;
+  }
+  
+  .ticket-description {
+    font-size: 16px;
+  }
+  
+  .ticket-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .ticket-button {
+    background-color: linear-gradient(
+      120deg,
+      rgba(245, 247, 250, 0.8) 0%,
+      #c3a0d5 100%
+    );
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-family: "Righteous";
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-button:hover {
+    background-color: #c1b5b5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: transform 0.5s, box-shadow 0.3s;
+  }
+  
+  .total-price {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .titre {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    font-family: "Righteous";
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .reservation-page {
+
+    .show-popUp {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .annonce {
+        background-color: #ebedee;
+        border-radius: 15px;
+        padding: 1rem;
+        font-size: medium;
+        height: 25vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        
+        .close {
+          font-size: medium;
+          background-image: linear-gradient(45deg, #ffa269, #669bb0,  #c3a0d5);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        
+        
+      }
+    }
+    
+    .cart {
+      margin: auto;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .ticket-card {
+        width: 80vw;
+        height: 50vh;
+      }
+    }
+
+  }
+}

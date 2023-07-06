@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  width: 100vw;
+}
+
+.container {
+  width: fit-content;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* Ajout de cette ligne */
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  align-items: center; /* Ajout de cette ligne */
+  padding: 1em;
+}
+
+.list-link {
+  display: flex;
+  align-items: center; /* Ajout de cette ligne */
+  font-family: "Rubik";
+}
+
+.list-link:last-child {
+  margin-right: 0;
+  font-family: "Rubik";
+}
+
+.list-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
+.partenaires {
+  display: flex;
+  align-items: center; /* Ajout de cette ligne */
+}
+
+.partenaires {
+  img {
+    width: auto;
+    height: 70px;
+    margin: 0 10px;
+  }
+}
+
+.buttonPartenaire {
+  border-radius: 5px;
+  background: linear-gradient(to right, #c3a0d5, #669bb0, #ffa269, #ecb0d6);
+  color: white;
+  padding: 0.7rem 1.3rem;
+  font-size: 1.4em;
+  border: none;
+  cursor: pointer;
+  font-family: "Rubik";
+}
+
+.buttonPartenaire:hover {
+  opacity: 0.8;
+}
+
+.collaborateurs {
+  margin-left: auto;
+  font-family: "Righteous";
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    .links {
+      margin: auto;
+    }
+    .list-link {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .partenaires {
+      .partenaires-section {
+        margin: auto;
+      }
+    }
+  }
+  .list-link {
+    font-family: "Rubik";
+  }
+
+  .list-link a {
+    font-size: 1em;
+  }
+
+  .buttonPartenaire {
+    font-size: 1em;
+  }
+
+  .partenaires-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .partenairesMCU {
+      height: 2.4rem;
+      width: auto;
+    }
+  }
+}

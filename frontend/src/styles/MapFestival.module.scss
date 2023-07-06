@@ -1,0 +1,14 @@
+.mapFestival {
+  height: 80vh;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .mapFestival {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}

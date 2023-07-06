@@ -1,0 +1,47 @@
+.mainArtistCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 150px;
+  height: 100%;
+  padding: 0.5em 0.5em;
+}
+
+.mainArtistPhoto {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.artistName {
+  font-size: 1.2em;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1300px;
+@media (min-width: $breakpoint-tablet) {
+  .mainArtistCard {
+    min-width: 200px;
+  }
+  .artistName {
+    height: 20%;
+    font-size: 1.5em;
+  }
+
+  .mainArtistPhoto {
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .mainArtistCard {
+    min-width: 300px;
+  }
+}
