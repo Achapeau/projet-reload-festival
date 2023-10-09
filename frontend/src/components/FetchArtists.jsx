@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import data from "../JSON/artistArray.json";
+import data from "../services/artistArray.json";
 
 function FetchArtists() {
   const credentials = {
