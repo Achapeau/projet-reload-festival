@@ -196,7 +196,8 @@ function FetchArtists() {
               Authorization: `Bearer ${res.data.access_token}`,
             },
           })
-        );
+          );
+          console.log("artiste?", request[0])
 
         axios
           .all(requests)
