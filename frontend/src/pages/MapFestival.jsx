@@ -69,27 +69,27 @@ function MapFestival() {
   ];
 
   const concertIcon = new Icon({
-    iconUrl: "../src/assets/Images/concerts.png",
+    iconUrl: "/Images/concerts.png",
     iconSize: [32, 32],
   });
 
   const campingIcon = new Icon({
-    iconUrl: "../src/assets/Images/places.png",
+    iconUrl: "/Images/places.png",
     iconSize: [32, 32],
   });
 
   const toiletsIcon = new Icon({
-    iconUrl: "../src/assets/Images/wc.png",
+    iconUrl: "/Images/wc.png",
     iconSize: [32, 32],
   });
 
   const foodIcon = new Icon({
-    iconUrl: "../src/assets/Images/food.png",
+    iconUrl: "/Images/food.png",
     iconSize: [32, 32],
   });
 
   const entranceIcon = new Icon({
-    iconUrl: "../src/assets/Images/tickets.png",
+    iconUrl: "/Images/tickets.png",
     iconSize: [32, 32],
   });
 

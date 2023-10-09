@@ -32,7 +32,6 @@ function HomePage() {
       setCurrentImageIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
         if (nextIndex >= mainArtistsData.length + 3) {
-          // Si l'index atteint la dernière image, revenir à la première image
           return 0;
         }
         return nextIndex;

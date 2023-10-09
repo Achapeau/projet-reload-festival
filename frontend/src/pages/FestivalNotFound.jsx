@@ -10,7 +10,7 @@ function FestivalNotFound() {
       </h1>
       <img
         className={styles.img}
-        src="../src/assets/Images/festivaNotFound.jpg"
+        src="/Images/festivaNotFound.jpg"
         alt="The desert"
       />
     </div>

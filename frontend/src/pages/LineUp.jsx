@@ -4,7 +4,6 @@ import styles from "../styles/Lineup.module.scss";
 import ArtistDescription from "../components/ArtistDescription";
 
 function LineUp() {
-  // code ajouté Annie: gestion du pop-up
   const [popUp, setPopUp] = useState(false);
   const [artistSelected, setArtistSelected] = useState("");
 
@@ -12,7 +11,6 @@ function LineUp() {
     setPopUp(!popUp);
     setArtistSelected(e.target.innerHTML);
   };
-  // fin du code ajouté par Annie
 
   const [filter, setFilter] = useState("");
   const [stageFilter, setStageFilter] = useState("All");

@@ -5,7 +5,6 @@ import styles from "../styles/ScheduleDisplay.module.scss";
 import ArtistDescription from "../components/ArtistDescription";
 
 function Schedule() {
-  // Gestion du pop-up
   const [popUp, setPopUp] = useState(false);
   const [artistSelected, setArtistSelected] = useState("");
 
@@ -14,19 +13,17 @@ function Schedule() {
     setArtistSelected(e.target.innerHTML);
   };
 
-  // Import des data depuis l'API reloas_festival.sql
   const [artistDatas, setArtistDatas] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/artists`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/artists`)
       .then((response) => {
         setArtistDatas(response.data);
       })
       .catch((error) => console.error(error));
   }, []);
 
-  // Manipulation des données pour pouvoir travailler avec les heures
   const newArtistData = artistDatas.map((el) => {
     const time = el.hour.split("h");
     const hours = parseInt(time[0], 10);
@@ -57,7 +54,6 @@ function Schedule() {
     return { ...el, numericHour: numericTime, endTime };
   });
 
-  // Tableau des stages et des jours
   const days = ["Samedi", "Dimanche"];
   const stages = [
     "Flying High",
@@ -66,7 +62,6 @@ function Schedule() {
     "Sunset Stage",
   ];
 
-  // génération d'un tableau avec toutes le heures de la timeline:
   let time = 11;
   const timeline = [];
   for (let i = 0; i <= 25; i += 1) {

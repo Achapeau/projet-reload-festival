@@ -14,7 +14,7 @@ function Favorites() {
       const favoriteDetailsPromises = parsedFavorites.map(async (favorite) => {
         try {
           const response = await axios.get(
-            `http://localhost:8000/name/${favorite.name}`
+            `${import.meta.env.VITE_BACKEND_URL}/name/${favorite.name}`
           );
           const artistDetails = response.data[0];
           return {

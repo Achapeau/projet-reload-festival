@@ -8,25 +8,22 @@ import FetchArtists from "./FetchArtists";
 import styles from "../styles/ArtistDescription.module.scss";
 
 function ArtistDescription({ togglePopUp, artistSelected }) {
-  // Récupérer les infos depuis l'API reload_festival.sql:
   const [reloadArtistData, setReloadArtistData] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/name/${artistSelected}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/name/${artistSelected}`)
       .then((response) => {
         setReloadArtistData(response.data);
       })
       .catch((error) => console.error(error));
   }, []);
 
-  // Récupérer les images depuis l'API spotify:
   const artists = FetchArtists();
   const artistSelectedData = artists.find(
     (el) => el.name.toLowerCase() === artistSelected.toLowerCase()
   );
 
-  // Fonction pour activation du state favorites:
   const [isFavorites, setIsFavorites] = useState(false);
   const addFavourite = () => {
     setIsFavorites(!isFavorites);
@@ -34,17 +31,14 @@ function ArtistDescription({ togglePopUp, artistSelected }) {
 
   useEffect(() => {
     if (isFavorites) {
-      // Récupérer les artistes favoris existants depuis le localStorage
       const favorites = localStorage.getItem("favorites");
       const parsedFavorites = favorites ? JSON.parse(favorites) : [];
 
-      // Vérifier si l'artiste sélectionné est déjà dans les favoris
       const isAlreadyFavorite = parsedFavorites.some(
         (favorite) => favorite.name === artistSelectedData.name
       );
 
       if (!isAlreadyFavorite) {
-        // Ajouter l'artiste sélectionné aux favoris
         const updatedFavorites = [...parsedFavorites, artistSelectedData];
         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
       }
