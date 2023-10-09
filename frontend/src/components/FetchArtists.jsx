@@ -197,7 +197,7 @@ function FetchArtists() {
             },
           })
           );
-          console.log("artiste?", request[0])
+          console.log("artiste?", requests[0])
 
         axios
           .all(requests)
