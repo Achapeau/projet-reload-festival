@@ -25,6 +25,7 @@ function Schedule() {
   }, []);
 
   const newArtistData = artistDatas.map((el) => {
+    const id = el.name;
     const time = el.hour.split("h");
     const hours = parseInt(time[0], 10);
     const minutes = parseInt(time[1], 10);
@@ -53,7 +54,6 @@ function Schedule() {
 
     return { ...el, numericHour: numericTime, endTime };
   });
-
   const days = ["Samedi", "Dimanche"];
   const stages = [
     "Flying High",
@@ -96,6 +96,7 @@ function Schedule() {
                       gridColumnStart: index + 1,
                       gridColumnEnd: index + 2,
                     }}
+                    key={newArtistData.id}
                   >
                     {hour}
                   </p>

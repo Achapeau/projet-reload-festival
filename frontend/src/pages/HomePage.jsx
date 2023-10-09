@@ -70,6 +70,7 @@ function HomePage() {
                 name={elem.name}
                 src={elem.images[1].url}
                 id={elem.id}
+                key={elem.id}
               />
             ))}
           </div>
