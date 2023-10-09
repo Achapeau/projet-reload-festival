@@ -50,7 +50,7 @@ app.get("/artist/:id", async (req, res) => {
     if (artist.length) {
       res.send(artist);
     } else {
-      res.sendStatus(404);
+      res.status(404).send("vous êtes perdus?");
     }
   } catch (err) {
     console.error(err);
